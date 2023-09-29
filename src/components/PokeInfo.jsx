@@ -60,8 +60,7 @@ const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities },
                         </div>
                     </Modal>
 
-
-                    <div className="close" onClick={clickToClose} />
+                    <div className="close close-mark" onClick={clickToClose}></div>
                     <div className="pokemon-sprite"> <img src={img_src}/> </div>
                     <div className="pokemon-name"> {pokemonSpecies} </div>
                     <div className="pokemon-types">

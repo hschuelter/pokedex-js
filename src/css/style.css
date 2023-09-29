@@ -1,14 +1,19 @@
+
 .close {
     position: absolute;
     opacity: 0.3;
+    margin-top: 5px;
+    margin-left: 70px;
 }
+
 .close:hover {
     opacity: 1;
 }
+
 .close:before, .close:after {
     position: absolute;
-    left: 182px;
-    top: 8px;
+    right: 11px;
+    top: 4px;
     content: ' ';
     height: 16px;
     width: 2px;
@@ -21,11 +26,21 @@
     transform: rotate(-45deg);
 }
 
+.close-mark {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: #242424;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .search-area {
     /* margin-top: 88px; */
     /* border: 1px solid #242424 ; */
     height: 48px;
     width: 30%;
+    min-width: 200px;
     position: relative;
     margin: 88px auto 0px;
     display: flex;
@@ -75,8 +90,9 @@
     border-radius: 8px;
     background-color: #242424;
     
-    height: 175px;
+    height: 160px;
     width: 200px;
+    min-width: 200px;
     margin-right: 4px;
     margin-bottom: 4px;
 
