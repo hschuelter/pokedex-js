@@ -8,9 +8,6 @@ import UndoIcon from '@mui/icons-material/Undo';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-// import TEste from "../static/images/1.png"
-
-
 function Pokedex ({ data }) {
     var dataList = [];
     var pokemonList = [];

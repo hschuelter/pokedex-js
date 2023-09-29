@@ -8,12 +8,9 @@ import DetailedInfo from './DetailedInfo';
 
 const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities }, ref) => {
     const [open, setOpen] = React.useState(false);
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
+
+    const handleClickOpenModal = () => setOpen(true);
+    const handleCloseModal = () => setOpen(false);
 
     let img_src = '../static/images/' + number + '.png';
     let pokemonSpecies = name.charAt(0).toUpperCase() + name.slice(1);
@@ -40,14 +37,24 @@ const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities },
 	return (
         <div>
             { !showResults ? null :
-                <div className="pokemon-info" onClick={handleClickOpen}>
+                <>
+                    <div className="pokemon-info" onClick={handleClickOpenModal}>
+                        <div className="close close-mark" onClick={clickToClose}></div>
+                        <div className="pokemon-sprite"> <img src={img_src}/> </div>
+                        <div className="pokemon-name"> {pokemonSpecies} </div>
+                        <div className="pokemon-types">
+                            { types.map((item) => 
+                                <Type type = {item}/>
+                            )}
+                            
+                        </div> 
+                    </div>
+
                     <Modal
                         open={open}
-                        onClose={handleClose}
+                        onClose={handleCloseModal}
                         aria-labelledby="modal-modal-title"
-                        aria-describedby="modal-modal-description"
-                    >
-                        <div>
+                        aria-describedby="modal-modal-description">
                             <DetailedInfo 
                                 number = {number}
                                 name = {name}
@@ -56,19 +63,8 @@ const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities },
                                 weight = {weight} 
                                 abilities = {abilities} 
                             />
-                        </div>
                     </Modal>
-
-                    <div className="close close-mark" onClick={clickToClose}></div>
-                    <div className="pokemon-sprite"> <img src={img_src}/> </div>
-                    <div className="pokemon-name"> {pokemonSpecies} </div>
-                    <div className="pokemon-types">
-                        { types.map((item) => 
-                            <Type type = {item}/>
-                        )}
-                        
-                    </div> 
-                </div>
+                </>
             }
         </div>
 	);

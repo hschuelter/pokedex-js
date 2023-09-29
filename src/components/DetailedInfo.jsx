@@ -7,7 +7,7 @@ import Type from './Type';
 import { Box, Grid, CircularProgress  } from '@mui/material';
 
 function calculateWidth (baseStat, total) {
-    return (baseStat / total) * 100 + '%';
+    return Math.min((baseStat / total), 1) * 100 + '%';
 }
 
 function chooseBackgroundColor (baseStat, total) {
@@ -59,7 +59,7 @@ function formatAbilities (abilities) {
 function DetailedInfo ({ number, name, types, height, weight, abilities }) {
     let img_src = '../static/images/' + number + '.png';
     let pokemonSpecies = name.charAt(0).toUpperCase() + name.slice(1);
-    const total = 255;
+    const total = 160;
     
     var formattedAbilities = formatAbilities(abilities);
     
@@ -145,7 +145,7 @@ function DetailedInfo ({ number, name, types, height, weight, abilities }) {
                                                     backgroundColor: chooseBackgroundColor(stats[0].base_stat, total)
                                                     }}/> 
                                         </div>
-                                        <div className="value"> {total} </div>
+                                        <div className="value"> { Math.max(stats[0].base_stat, total) } </div>
                                     </div>
                                     <div className="table-row">
                                         <div className="title"> Attack </div>
@@ -157,7 +157,7 @@ function DetailedInfo ({ number, name, types, height, weight, abilities }) {
                                                     backgroundColor: chooseBackgroundColor(stats[1].base_stat, total)
                                                     }}/> 
                                         </div>
-                                        <div className="value"> {total} </div>
+                                        <div className="value"> { Math.max(stats[1].base_stat, total) } </div>
                                     </div>
                                     <div className="table-row">
                                         <div className="title"> Defense </div>
@@ -169,7 +169,7 @@ function DetailedInfo ({ number, name, types, height, weight, abilities }) {
                                                     backgroundColor: chooseBackgroundColor(stats[2].base_stat, total)
                                                     }}/> 
                                         </div>
-                                        <div className="value"> {total} </div>
+                                        <div className="value"> { Math.max(stats[2].base_stat, total) } </div>
                                     </div>
                                     <div className="table-row">
                                         <div className="title"> Sp. Atk </div>
@@ -181,7 +181,7 @@ function DetailedInfo ({ number, name, types, height, weight, abilities }) {
                                                     backgroundColor: chooseBackgroundColor(stats[3].base_stat, total)
                                                     }}/> 
                                         </div>
-                                        <div className="value"> {total} </div>
+                                        <div className="value"> { Math.max(stats[3].base_stat, total) } </div>
                                     </div>
                                     <div className="table-row">
                                         <div className="title"> Sp. Def </div>
@@ -193,7 +193,7 @@ function DetailedInfo ({ number, name, types, height, weight, abilities }) {
                                                     backgroundColor: chooseBackgroundColor(stats[4].base_stat, total)
                                                     }}/> 
                                         </div>
-                                        <div className="value"> {total} </div>
+                                        <div className="value"> { Math.max(stats[4].base_stat, total) } </div>
                                     </div>
                                     <div className="table-row">
                                         <div className="title"> Speed </div>
@@ -205,7 +205,7 @@ function DetailedInfo ({ number, name, types, height, weight, abilities }) {
                                                     backgroundColor: chooseBackgroundColor(stats[5].base_stat, total)
                                                     }}/> 
                                         </div>
-                                        <div className="value"> {total} </div>
+                                        <div className="value"> { Math.max(stats[5].base_stat, total) } </div>
 
                                     </div>
                                     <div className="table-row">
