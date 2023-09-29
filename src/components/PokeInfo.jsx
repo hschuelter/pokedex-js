@@ -4,7 +4,6 @@ import {forwardRef, useImperativeHandle, useRef} from 'react';
 import Type from './Type';
 import { Button, Modal } from '@mui/material';
 
-
 import DetailedInfo from './DetailedInfo';
 
 const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities }, ref) => {
@@ -16,7 +15,7 @@ const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities },
         setOpen(false);
     };
 
-    let img_src = './img/' + number + '.png';
+    let img_src = '../static/images/' + number + '.png';
     let pokemonSpecies = name.charAt(0).toUpperCase() + name.slice(1);
 
     const [showResults, setShowResults] = React.useState(true);
