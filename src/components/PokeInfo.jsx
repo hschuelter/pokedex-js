@@ -55,6 +55,7 @@ const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities },
                         onClose={handleCloseModal}
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description">
+                        <div>
                             <DetailedInfo 
                                 number = {number}
                                 name = {name}
@@ -63,6 +64,7 @@ const PokeInfo = forwardRef(({ number, name, types, height, weight, abilities },
                                 weight = {weight} 
                                 abilities = {abilities} 
                             />
+                        </div>
                     </Modal>
                 </>
             }
