@@ -57,7 +57,7 @@ function formatAbilities (abilities) {
 
 
 function DetailedInfo ({ number, name, types, height, weight, abilities }) {
-    let img_src = './img/' + number + '.png';
+    let img_src = '../static/images/' + number + '.png';
     let pokemonSpecies = name.charAt(0).toUpperCase() + name.slice(1);
     const total = 255;
     
