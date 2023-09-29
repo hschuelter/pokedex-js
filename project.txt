@@ -1,0 +1,7 @@
+Habilidades:
+- React + Vite
+- Material UI - MUI
+- HTML + CSS + Javascript
+- Front-end + UX Design
+- HTTP Request 
+- JSON + API Request

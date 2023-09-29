@@ -1,0 +1,242 @@
+.close {
+    position: absolute;
+    opacity: 0.3;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 182px;
+    top: 8px;
+    content: ' ';
+    height: 16px;
+    width: 2px;
+    background-color: #ffffff;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.search-area {
+    /* margin-top: 88px; */
+    /* border: 1px solid #242424 ; */
+    height: 48px;
+    width: 30%;
+    position: relative;
+    margin: 88px auto 0px;
+    display: flex;
+}
+
+.search-area button{
+    margin-left: auto;
+    margin-right: 8px;
+    height: 80%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.search-area button:focus {
+    outline: none;
+}
+
+.search-area input {
+    height: 32px;
+    width: 100%;
+
+    margin-top: 7px;
+    margin-left: 12px;
+    
+    background-color: white;
+    color: black;
+    font-size: medium;
+    border: 0px;
+}
+
+.search-area input:focus {
+    outline: none;
+}
+
+.pokedex {
+    margin: auto;
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+    justify-content: center;
+}
+
+.pokemon-info {
+    /* border: 1px solid #fff; */
+    border-radius: 8px;
+    background-color: #242424;
+    
+    height: 175px;
+    width: 200px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+.pokemon-info:hover {
+    background-color: #484848;
+    cursor: pointer;
+}
+
+.pokemon-sprite {
+    height: 80px;
+}
+  
+.pokemon-name {
+    text-align: center;
+    margin-top: 5px;
+  
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25rem; 
+}
+  
+.pokemon-types {
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.loading-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    height: 380px;
+    width: 1000px;
+
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.loading-info .loading-progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.detailed-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    height: 380px;
+    width: 1000px;
+
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+
+    padding: 8px;
+}
+
+.detailed-info .pokemon-name {
+    color: #000;
+    font-weight: bold;
+    font-size: 36px; 
+}
+
+.detailed-info h2 {
+    text-align: center;
+}
+
+.detailed-info .pokemon-sprite img {
+    height: auto;
+    width: 100%;
+    /* background-color: black; */
+    border: 1px solid white;
+}
+  
+  
+.type-icon {
+    display: inline-block;
+    width: 66px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+  
+    color: #fff;
+    font-size: .75rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.801);
+    text-transform: uppercase;
+  
+    /* border: 1px solid #a3a3a3; */
+    border-radius: 4px;
+}
+  
+.type-icon:last-child {
+    margin-right: 0px;
+}
+  
+.type-bug {
+    background-color: #ab2;
+}
+.type-dark {
+    background-color: #754;
+}
+.type-dragon {
+    background-color: #76e;
+}
+.type-electric {
+    background-color: #fc3;
+}
+.type-fairy {
+    background-color: #e9e;
+}
+.type-fighting {
+    background-color: #b54;
+}
+.type-fire {
+    background-color: #f42;
+}
+.type-flying {
+    background-color: #89f;
+}
+.type-grass {
+    background-color: #7c5;
+}
+.type-ground {
+    background-color: #db5;
+}
+.type-ghost {
+    background-color: #66b;
+}
+.type-ice {
+    background-color: #6cf;
+}
+.type-normal {
+    background-color: #aa9;
+}
+.type-poison {
+    background-color: #a59;
+}
+.type-psychic {
+    background-color: #f59;
+}
+.type-rock {
+    background-color: #ba6;
+}
+.type-steel {
+    background-color: #aab;
+}
+.type-water {
+    background-color: #39f;
+}
