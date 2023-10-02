@@ -27,11 +27,11 @@ function Pokedex ({ data }) {
 
         
         for (var i = 0; i < pokemonList.length; i++) {
-            var inlcudesInName = pokemonList[i].props.name.indexOf(searching) >= 0;
+            var inlcudesInName = pokemonList[i].props.name.indexOf(searching.toLowerCase()) >= 0;
             var includesInType = false;
 
             pokemonList[i].props.types.map( (type) => {
-                if (type.indexOf(searching) >= 0){
+                if (type.indexOf(searching.toLowerCase()) >= 0){
                     includesInType = true;
                 }
             });
